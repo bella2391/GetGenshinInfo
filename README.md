@@ -1,4 +1,4 @@
-# Getting Genshin Info
+# Getting Genshin Info by JavaScript
 ## Note
 This is a project for JavaScript with similar functionality to PHP Code from [GetGenshinInfo_BasePHP](https://github.com/bella2391/GetGenshinInfo/tree/base-php).<br>
 ## Comment 

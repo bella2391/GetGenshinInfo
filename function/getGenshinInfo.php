@@ -1,5 +1,5 @@
 <?php
-function getApi($uid) { 
+function getApi($uid) {  
     $url = "https://enka.network/api/uid/{$uid}/";
 
     // Initialize cURL session

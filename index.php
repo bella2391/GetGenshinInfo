@@ -6,7 +6,7 @@ require("./function/getGenshinInfo.php");
 $access_deny = false;
 if(!empty($_POST))
 {
-    if(isset($_POST["uid-input"]))
+    if(isset($_POST["uid-input"])) 
     {
         if(isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["token"])
         {

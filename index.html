@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/genshin.css">
+    <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+    <div id="access-deny" class="access-deny font3-0" style="display: none;">Access denied.</div>
+    <form id="uid-form">
+        <label class="font2-0">
+            Genshin-UID
+            <input type="text" id="uid-input" name="uid-input">
+        </label>
+        <input type="hidden" id="token" name="token">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="result"></div>
+</body>
+</html>

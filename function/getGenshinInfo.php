@@ -64,7 +64,17 @@ function getApi($uid) {
         //echo "<br>";
         echo "Player Nickname: $playerNickname<br>";
         echo "Player Level: $playerLevel<br>";
-        echo "Player Avatar ID: $playerAvatarId<br>";
+
+        if(array_key_exists("avatarId", $playerInfo['profilePicture']))
+        {
+            $playerAvatarId = $playerInfo['profilePicture']['avatarId'];
+            echo "Player Avatar ID: $playerAvatarId<br>";
+        }
+        else
+        {
+            echo "Player Avatar ID: null<br>";
+        }
+        
         echo "Detail -> <a href='https://enka.network/api/uid/{$uid}/' style='color:blue;'>https://enka.network/api/uid/{$uid}/</a>";
     }
 }

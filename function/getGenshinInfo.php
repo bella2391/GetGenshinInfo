@@ -32,13 +32,13 @@ function getApi($uid) {
     curl_close($ch);
 
     // Output HTTP response code
-    echo "HTTP Response Code: " . $httpCode . "<br>";
+    //echo "HTTP Response Code: " . $httpCode . "<br>";
 
     // Output the length of the raw response for debugging
-    echo "Raw Response Length: " . strlen($response) . " bytes<br>";
+    //echo "Raw Response Length: " . strlen($response) . " bytes<br>";
 
-    $first1000lines = substr($response, 0, 1000);
     // Output the first 1000 characters of the raw response for debugging
+    //$first1000lines = substr($response, 0, 1000);
     //echo "Raw Response (First 1000 chars): " . $first1000lines . "<br>";
 
     // Decode JSON response
@@ -61,7 +61,7 @@ function getApi($uid) {
         $playerLevel = $playerInfo['level'];
         $playerAvatarId = $playerInfo['profilePicture']['avatarId'];
         
-        echo "<br>";
+        //echo "<br>";
         echo "Player Nickname: $playerNickname<br>";
         echo "Player Level: $playerLevel<br>";
         echo "Player Avatar ID: $playerAvatarId<br>";

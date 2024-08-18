@@ -3,6 +3,7 @@
 session_start();
 require("./function/getGenshinInfo.php");
 
+$checkOK = false;
 $access_deny = false;
 if(!empty($_POST))
 {
@@ -33,6 +34,7 @@ $_SESSION['token'] = $token;
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/genshin.css">
     </head>
@@ -43,18 +45,20 @@ $_SESSION['token'] = $token;
             die("<div class='access-deny font3-0'>Access denied.</div>");
         }
         ?>
-        <form action="" method="POST" >
-            <label class="font2-0">
-                Genshin-UID
-                <?php if(isset($_SESSION["tmp-uid"])): ?>
-                    <input type="text" name="uid-input" value="<?=$_SESSION["tmp-uid"]?>">
-                <?php else: ?>
-                    <input type="text" name="uid-input">
-                <?php endif; ?>
-            </label>
-            <input type="hidden" name="token" value="<?=$_SESSION["token"]?>">
-            <input type="submit">
-        </form>
+        <?php if(!$checkOK): ?>
+            <form action="" method="POST" >
+                <label class="font2-0">
+                    Genshin-UID
+                    <?php if(isset($_SESSION["tmp-uid"])): ?>
+                        <input type="text" name="uid-input" value="<?=$_SESSION["tmp-uid"]?>">
+                    <?php else: ?>
+                        <input type="text" name="uid-input">
+                    <?php endif; ?>
+                </label>
+                <input type="hidden" name="token" value="<?=$_SESSION["token"]?>">
+                <input type="submit">
+            </form>
+        <?php endif; ?>
     </body>
 </html>
 <?php

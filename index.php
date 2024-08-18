@@ -36,7 +36,6 @@ $_SESSION['token'] = $token;
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="./assets/css/base.css">
-        <link rel="stylesheet" href="./assets/css/genshin.css">
     </head>
     <body>
         <?php 
@@ -50,9 +49,9 @@ $_SESSION['token'] = $token;
                 <label class="font2-0">
                     Genshin-UID
                     <?php if(isset($_SESSION["tmp-uid"])): ?>
-                        <input type="text" name="uid-input" value="<?=$_SESSION["tmp-uid"]?>">
+                        <input type="text" name="uid-input" value="<?=$_SESSION["tmp-uid"]?>" placeholder="原神のUIDを入力してください。">
                     <?php else: ?>
-                        <input type="text" name="uid-input">
+                        <input type="text" name="uid-input" placeholder="原神のUIDを入力してください。">
                     <?php endif; ?>
                 </label>
                 <input type="hidden" name="token" value="<?=$_SESSION["token"]?>">

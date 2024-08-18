@@ -72,7 +72,7 @@ function getApi($uid) {
         }
         else
         {
-            echo "Player Avatar ID: null<br>";
+            echo "Player Avatar ID: undefined<br>";
         }
         
         echo "Detail -> <a href='https://enka.network/api/uid/{$uid}/' style='color:blue;'>https://enka.network/api/uid/{$uid}/</a>";

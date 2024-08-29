@@ -13,6 +13,7 @@ function getApi($uid) {
         'Accept: application/json',
         'User-Agent: MyApp/1.0'
     ]);
+
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Follow redirects
 
     // Execute cURL session
@@ -65,13 +66,10 @@ function getApi($uid) {
         echo "Player Nickname: $playerNickname<br>";
         echo "Player Level: $playerLevel<br>";
 
-        if(array_key_exists("avatarId", $playerInfo['profilePicture']))
-        {
+        if (array_key_exists("avatarId", $playerInfo['profilePicture'])) {
             $playerAvatarId = $playerInfo['profilePicture']['avatarId'];
             echo "Player Avatar ID: $playerAvatarId<br>";
-        }
-        else
-        {
+        } else {
             echo "Player Avatar ID: undefined<br>";
         }
         

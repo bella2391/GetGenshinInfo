@@ -1,8 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-if (isset($_GET['uid'])) 
-{
+if (isset($_GET['uid'])) {
     $uid = $_GET['uid'];
     $url = "https://enka.network/api/uid/{$uid}/";
 
@@ -19,8 +18,7 @@ if (isset($_GET['uid']))
 
     $response = curl_exec($ch);
 
-    if ($response === false) 
-    {
+    if ($response === false) {
         echo json_encode(['error' => curl_error($ch)]);
         curl_close($ch);
         exit;
@@ -30,8 +28,6 @@ if (isset($_GET['uid']))
 
     // Output the JSON response
     echo $response;
-} 
-else 
-{
+} else {
     echo json_encode(['error' => 'No UID provided']);
 }
